@@ -71,13 +71,10 @@ Inspired by L<a Rakudo issue|https://github.com/rakudo/rakudo/issues/1725>.
 
 =head1 BUGS
 
-Apparently some issue in Rakudo in release 2024.09 and earlier is causing
-the handling of C<int32>, C<int64>, C<uint64> and C<uint32> to fail.
-
 Another issue in the new Raku grammar (aka RakuAST) is causing this
 module to fail completely at import.
 
-It is hoped that these issues will be resolved in the future.s
+It is hoped that these issues will be resolved in the future.
 
 =head1 AUTHOR
 

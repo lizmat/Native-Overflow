@@ -16,10 +16,10 @@ my byte   $i;
 for
   $a, 1_000,
   $b, 1_000_000,
-  $c, 1_000_000_000,
-  $d, 1_000_000_000_000_000,
-  $e, 1_000_000_000_000_000,
-  $f, 1_000_000_000,
+  $c, 1_000_000_000_000,
+  $d, 1_000_000_000_000_000_000_000_000,
+  $e, 1_000_000_000_000_000_000_000_000,
+  $f, 1_000_000_000_000,
   $g, 1_000_000,
   $h, 1_000,
   $i, 1_000
@@ -31,11 +31,6 @@ for
         next;
     }
     x = $value;
-
-    todo "Rakudo appears to handle these incorrectly";
-    flunk "did not die for { x.^name } and $value";
-    todo "Rakudo appears to handle these incorrectly";
-    flunk "did not die for { x.^name } and $value";
 }
 
 {
