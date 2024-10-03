@@ -1,0 +1,73 @@
+use Test;
+use Native::Overflow;
+
+plan 30;
+
+my int8   $a;
+my int16  $b;
+my int32  $c;
+my int64  $d;
+my uint64 $e;
+my uint32 $f;
+my uint16 $g;
+my uint8  $h;
+my byte   $i;
+
+for
+  $a, 1_000,
+  $b, 1_000_000,
+  $c, 1_000_000_000,
+  $d, 1_000_000_000_000_000,
+  $e, 1_000_000_000_000_000,
+  $f, 1_000_000_000,
+  $g, 1_000_000,
+  $h, 1_000,
+  $i, 1_000
+-> \x, $value {
+    CATCH {
+        is .^name, 'X::TypeCheck::Assignment',
+          "did we get the correct exception for { x.^name } { x.VAR.name }";
+        is .got, $value, "did we get $value?";
+        next;
+    }
+    x = $value;
+
+    todo "Rakudo appears to handle these incorrectly";
+    flunk "did not die for { x.^name } and $value";
+    todo "Rakudo appears to handle these incorrectly";
+    flunk "did not die for { x.^name } and $value";
+}
+
+{
+    use Native::Overflow <bit uint1 uint2 uint4 nibble int4 int2 int1>;
+    my bit    $a;
+    my uint1  $c;
+    my uint2  $d;
+    my uint4  $e;
+    my nibble $f;
+    my int4   $g;
+    my int2   $h;
+    my int1   $i;
+
+    for
+      $a, 2,
+      $b, 2,
+      $c, 5,
+      $d, 16,
+      $e, 16,
+      $f, 8,
+      $g, 4,
+      $h, 2,
+      $i, 1
+    -> \x, $value {
+        CATCH {
+            is .^name, 'X::TypeCheck::Assignment',
+              "did we get the correct exception for { x.^name } { x.VAR.name }";
+            is .got, $value, "did we get $value?";
+            next;
+        }
+        x = $value;
+    }
+}
+
+# vim: expandtab shiftwidth=4

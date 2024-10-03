@@ -1,0 +1,27 @@
+{
+  "auth": "zef:lizmat",
+  "authors": [
+    "Elizabeth Mattijsen"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "lexically enforce overflow checking on natives",
+  "license": "Artistic-2.0",
+  "name": "Native::Overflow",
+  "perl": "6.d",
+  "provides": {
+    "Native::Overflow": "lib/Native/Overflow.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "https://github.com/lizmat/Native-Overflow.git",
+  "tags": [
+    "NATIVE",
+    "OVERFLOW"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}
