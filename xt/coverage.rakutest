@@ -1,0 +1,13 @@
+use Test::Coverage;
+
+todo("subsets are marked as coverable, but cannot be covered");
+coverage-at-least 80;
+
+todo("subsets are marked as coverable, but cannot be covered");
+uncovered-at-most 0;
+
+source-with-coverage;
+
+report;
+
+# vim: expandtab shiftwidth=4
