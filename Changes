@@ -1,6 +1,8 @@
 Revision history for Native::Overflow
 
 {{$NEXT}}
+
+0.0.3  2025-08-10T20:33:49+02:00
     - Modernized META and doc
     - Coverage testing at 100%
     - Updated copyright year
