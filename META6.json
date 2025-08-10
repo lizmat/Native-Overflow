@@ -7,21 +7,25 @@
   ],
   "depends": [
   ],
-  "description": "lexically enforce overflow checking on natives",
+  "description": "Lexically enforce overflow checking on natives",
   "license": "Artistic-2.0",
   "name": "Native::Overflow",
-  "perl": "6.d",
   "provides": {
     "Native::Overflow": "lib/Native/Overflow.rakumod"
   },
+  "raku": "6.d",
   "resources": [
   ],
   "source-url": "https://github.com/lizmat/Native-Overflow.git",
+  "support": {
+    "bugtracker": "https://github.com/lizmat/Native-Overflow/issues",
+    "source": "https://github.com/lizmat/Native-Overflow.git"
+  },
   "tags": [
     "NATIVE",
     "OVERFLOW"
   ],
   "test-depends": [
   ],
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
